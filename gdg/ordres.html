@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="fr">
+
+<!-- Mirrored from www.aidedd.org/gdg/ordres.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Mar 2022 23:19:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<title>Guerre des Guildes</title>
+	<link href="style5e1f.css?v=2" rel="stylesheet" type="text/css" /> 
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1">
+	<meta name="robots" content="noindex">
+	<script type="text/javascript" src="../dnd-commun/lib/jquery.min.js"></script>
+</head>
+
+<body>
+	<script type="text/javascript">
+	function ordre (lieu, sens, type)		
+	{
+		var thisVBefore = $('#V'+lieu).val();
+		var thisHBefore = $('#H'+lieu).val();
+		var thisTBefore = Number(thisVBefore) + Number(thisHBefore);
+		if (type == 1)
+		{
+			var VoleurBefore = $('#voleur').val();
+
+			if ((sens == 1) && (VoleurBefore > 0) && (thisTBefore < 2))
+			{
+				$('#V'+lieu).val(Number(thisVBefore)+1);
+				$('#voleur').val(Number(VoleurBefore)-1);
+				if ($('#A'+lieu).val() == "-")
+					$('#V'+lieu).addClass("AttN"); 
+				else
+					$('#V'+lieu).addClass("AttP"); 
+			}
+			else if ((sens == -1) && (thisVBefore > 0))
+			{
+				$('#V'+lieu).val(Number(thisVBefore)-1);
+				$('#voleur').val(Number(VoleurBefore)+1);
+				if ($('#V'+lieu).val() == 0)
+				{
+					$('#V'+lieu).removeClass("AttP"); 
+					$('#V'+lieu).removeClass("AttN"); 
+				}
+			}
+		}
+		else if (type == 0)
+		{
+			var HommeBefore = $('#homme').val();
+			if ((sens == 1) && (HommeBefore > 0) && (thisTBefore < 2))
+			{
+				$('#H'+lieu).val(Number(thisHBefore)+1);
+				$('#homme').val(Number(HommeBefore)-1);
+				if ($('#A'+lieu).val() == "-")
+					$('#H'+lieu).addClass("AttN"); 
+				else
+					$('#H'+lieu).addClass("AttP"); 
+			}
+			else if ((sens == -1) && (thisHBefore > 0))
+			{
+				$('#H'+lieu).val(Number(thisHBefore)-1);
+				$('#homme').val(Number(HommeBefore)+1);
+				if ($('#H'+lieu).val() == 0)
+				{
+					$('#V'+lieu).removeClass("AttP"); 
+					$('#V'+lieu).removeClass("AttN"); 
+				}
+			}
+		}
+	}
+
+	function att (lieu)		
+	{
+		if ($('#A'+lieu).val() == "+")
+		{
+			$('#A'+lieu).val("-");
+			$('#V'+lieu).removeClass("AttP"); 
+			$('#H'+lieu).removeClass("AttP"); 
+			if ($('#V'+lieu).val() > 0)
+				$('#V'+lieu).addClass("AttN"); 
+			if ($('#H'+lieu).val() > 0)
+				$('#H'+lieu).addClass("AttN"); 
+		}
+		else
+		{
+			$('#A'+lieu).val("+");
+			$('#V'+lieu).removeClass("AttN"); 
+			$('#H'+lieu).removeClass("AttN"); 
+			if ($('#V'+lieu).val() > 0)
+				$('#V'+lieu).addClass("AttP"); 
+			if ($('#H'+lieu).val() > 0)
+				$('#H'+lieu).addClass("AttP"); 
+		}
+	}
+	</script>
+
+	<!-- ********************************************** -->
+	<!-- MENU -->
+	<!-- ********************************************** -->
+
+	<div class="header">
+		<h1><a href="../univers/guerre-des-guildes/index.html">Guerre des Guildes</a></h1>
+		<p>La guerre des Guildes de Laelith</p>
+	</div>
+
+	<!-- ********************************************** -->
+	<!-- 1ere colonne -->
+	<!-- ********************************************** -->
+
+	<div class="col col1">
+	
+	<h3>Notes</h3>
+	<p>Cette page est le tableau de bord des chefs de guilde. Notez que vous pouvez masquer certaines sections en cliquant simplement sur le titre de celles-ci.</p>
+	<p><strong>ORDRES</strong>. Chaque chef de guilde peut ici remplir sa feuille d'ordre. Pour chaque personne à vos ordres, vous devez indiquer :<br />	
+	- Le lieu où il va se rendre.<br />
+	- Son attitude (amicale ou hostile).</p>
+	<p><strong>NOTES</strong>. Vous pouvez également sauvegarder des notes personnelles. Celles-ci sont entièrement confidentielles ; les informations qui y figurent ne sont publiées nul part.</p>
+	<p><strong>CONCURRENTS</strong>. Cette section vous permet d'envoyer un message à un chef de guilde via les Messages Privés du forum, de voir le classement et de savoir qui a déjà posté ses ordres, ou d'envoyer à une guilde un message anonyme.</p>
+	<p>&nbsp;</p>	
+	<h3>Liens</h3>
+	<p><a href="journal.html">Journal</a></p>
+	<p>Ordres</p>
+	<p><a href="http://forum.aidedd.org/viewforum.php?f=47">Forum</a></p>
+
+	</div><div class="col col2">
+		<h2>FEUILLE D'ORDRE
+	</h2><p>Désolé, vous n'êtes pas chef d'une guilde.</p>	</div>
+</body>
+
+<!-- Mirrored from www.aidedd.org/gdg/ordres.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Mar 2022 23:19:44 GMT -->
+</html>

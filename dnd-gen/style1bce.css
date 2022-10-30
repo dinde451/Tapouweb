@@ -1,0 +1,53 @@
+/**************/
+/* GENERATEUR */
+/**************/
+
+a:link, a:visited, a:hover {text-decoration:none; font-weight:bold; color:#B80000}
+
+div.col1	{width:50%; padding:10px; margin-top:10px; border:0}
+div.col2	{width:50%; padding:10px; margin-top:10px; border-left:1px solid #DDD}
+div.col h2	{margin:15px 0 10px 0; line-height:32px}
+div.col h3	{margin:20px 0 10px 0}
+div.col p	{margin-bottom:6px}
+
+.choix		{text-align:center; width:19%; margin:0; padding:10px 5px 10px 5px; display:inline-block}
+.choix i	{font-size:64px; cursor:pointer; margin-top:5px}
+.choix i:hover	{color:#888}
+
+.result	{margin:20px}
+
+input#texte, select#langue	{font-size:14px; padding:4px; margin:10px 1% 0 1%; border:1px solid #A0A0A0}
+input#texte	{width:95%}
+div#output	{padding:20px}
+
+@font-face {
+	font-family: 'nain';
+	src: url('webfonts/nain.woff');
+	}
+@font-face {
+	font-family: 'elfique';
+	src: url('webfonts/elfique.woff');
+	}
+@font-face {
+	font-family: 'draconique';
+	src: url('webfonts/draconique.woff');
+	}
+@font-face {
+	font-family: 'infernal';
+	src: url('webfonts/infernal.woff');
+	}
+@font-face {
+	font-family: 'celeste';
+	src: url('webfonts/celeste.woff');
+	}
+	
+@media only screen and (max-width:999px) {
+	div.col1	{width:100%; border:0; margin-top:5px}
+	div.col2	{width:100%; border:0; margin-top:15px}
+
+	.result		{margin:10px}
+	div#output	{padding:10px}
+	input#texte	{width:98%}
+	.choix		{width:24%}
+	.choix i	{font-size:48px}
+}

@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Mirrored from www.aidedd.org/dnd-dice/index.php?l=1 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Mar 2022 23:07:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Dice Roller &raquo; Dungeons &amp; Dragons - D&amp;D 5</title>
+	
+	<meta name="viewport" content="initial-scale=1">
+	<meta name="description" content="Online DnD 5 Dice Roller to roll all dice, with advantage, disadvantage, 3 best of 4. The app will also show you graphically all the probabilities.">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@aideddorg">
+	<meta name="twitter:title" content="AideDD">
+	<meta name="twitter:description" content="D&amp;D 5 Dice Roller">
+	<meta name="twitter:image" content="../assets/site/logo.png">
+	<script src="../dnd-commun/lib/jquery.min.js"></script>
+	<script src="../dnd-commun/lib/jquery.canvasjs.min.js"></script>
+	<script src="fonctionsa4f0.js?v=0"></script>
+	<link rel="alternate" href="index.html" hreflang="fr" />
+	<link rel="alternate" href="index9f3e.html?l=1" hreflang="en" />
+	<link rel="canonical" href="index9f3e.html?l=1" />
+	<link rel="icon" href="../images/favicon.ico" sizes="16x16"/>
+	<link rel="icon" href="../images/favicon-32x32.png" sizes="32x32" />
+	<link rel="apple-touch-icon" href="../images/favicon-152x152.png" sizes="152x152" />
+	<link rel="icon" href="../images/favicon-192x192.png" sizes="192x192" />
+	<link href="../css/all.min.css" rel="stylesheet" />
+	<link href="../dnd-commun/style5e1f.css?v=2" rel="stylesheet" type="text/css" /> 
+	<link href="stylebea6.css?v=7" rel="stylesheet" type="text/css" /> 
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-346920-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-346920-5');
+    </script>
+</head>
+
+<body>
+	
+	<!-- **** -->
+	<!-- MENU -->
+	<!-- **** -->
+
+	<div class="header">
+		<h1><a href="index.html">Dice Roller</a></h1>
+		<p>D&D 5 Dice Roller and Probabilities</p>
+
+		<nav>
+			<input class="menu-btn" type="checkbox" id="menu-btn" /><label class="menu-icon" for="menu-btn"><i class="fas fa-bars"></i></label>
+			<ul class="menu">
+			    <li><a href='../en/index.html'><i class='fas fa-home'></i></a></li><li id='contextMenu1' onclick="contextMenus('1')" class='current'>Dice Roller</li><li id='contextMenu2' onclick="contextMenus('2')">Probabilities</li><li><a href='https://www.youtube.com/watch?v=0Il7F9bjcHo'>Video</a></li><li><a href='index00e5.html?l=0'>Français</a></li>	
+			 </ul>
+		</nav>
+	</div>
+
+	<!-- *************** -->
+	<!-- TAB Dice Roller -->
+	<!-- *************** -->
+
+    <div id="tab1">
+	    <div class="col col1">
+    		<div id="result"></div>
+
+	    	<button class="xp" onclick=multiple() id="mul" title="Sum dice"><i class="fas fa-plus"></i></button><button class="xp" onclick=clearHist() title="Clear">C</button><button class="xp" onclick=screen() id="his" title="Historical"><i class="fas fa-history"></i></button><br />
+
+   		    <button onclick=dice(4)>D4</button><button onclick=dice(6)>D6</button><button onclick=dice(8)>D8</button><button onclick=dice(10)>D10</button><button onclick=dice(12)>D12</button><br />
+			
+			<button onclick=dice(20)>D20</button><button onclick="dice('A')" title="Advantage">D20 (A)</button><button onclick="dice('D')" title="Disadvantage">D20 (D)</button><button onclick=dice(100)>D100</button><button onclick=best3of4() title="Best 3 of 4">4D6 (B3)</button><br />
+
+		    <div id="hist" style="display:none"></div>
+    	</div><div id="aide" class="col col2">
+		    <p>This online application will allow you to roll all dice used in a D&D 5 game, and also to calculate and compare rolls probabilities.</p>
+			
+			<h2>Dice Roller</h2>
+			<p><strong>(A)</strong> means rolling 2 dice with Advantage (you keep the higher of the two rolls).</p>
+			<p><strong>(D)</strong> means rolling 2 dice with Disadvantage (you keep the lower of the two rolls).</p>
+			<p><strong>(B3)</strong> means rolling 4d6 and drop the lowest (main methodology for rolling the 6 ability scores for a character).</p>
+			<br />
+			<p><strong><i class='fas fa-plus'></i></strong> (or shift) to sum various rolls.</p>
+			<p><strong>C&nbsp;</strong> (or escape) to clear the historical.</p>
+			<p><strong><i class='fas fa-history'></i></strong> (or tab) to show or hide historical and detail of the rolls.</p>
+
+			<h2>Probabilities</h2>
+			<p>Allows to calculate and compare dice probabilities, included Advantage and Disadvantage, with graphic representation.</p>
+
+			<p>&nbsp;</p>
+			<p><a href="../site/contact/index.html">Report a bug</a></p>
+			<div class="ads">
+   				<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+   				<!-- Application -->
+    			<ins class="adsbygoogle"
+    			  style="display:block"
+    			  data-ad-client="ca-pub-5355421917378265"
+    			  data-ad-slot="5150556388"
+    			  data-ad-format="auto"
+    			  data-full-width-responsive="true"></ins>
+    			<script>
+    		      (adsbygoogle = window.adsbygoogle || []).push({});
+	    		</script>
+	    	</div>
+    	</div>
+	</div>
+	    
+	<!-- *************** -->
+	<!-- TAB Probabilies -->
+	<!-- *************** -->
+
+    <div id="tab2" style="display:none">
+	    <div class="col col1">
+		    <p>Dice number <select id="nbr1">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="2A">2 (A)</option>
+			<option value="2D">2 (D)</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="4B3">4 (B3)</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+		    </select>
+
+	    	Dice type <select id="dice1">
+			<option value="4">4</option>
+			<option value="6">6</option>
+			<option value="8">8</option>
+			<option value="10">10</option>
+			<option value="12">12</option>
+			<option value="20" selected="selected">20</option>
+			<option value="100">100</option>
+	    	</select>
+
+	    	Bonus <input id="bonus1" size="3" value="0" /></p>
+
+    		<p>Score to reach <input id="goal1" size="3" value="10" onchange="calcul(1, 1)" />
+
+    		<i class="fas fa-calculator" onclick="calcul(1, 1)" title="Calculate"></i></p>
+
+    		<div id="result1"></div>
+
+	    	<div id="chartContainer1" style="height: 200px; width:100%;"></div>   	
+    	</div><div class="col col2">
+    		<p>Dice number <select id="nbr2">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="2A">2 (A)</option>
+			<option value="2D">2 (D)</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="4B3">4 (B3)</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+    		</select>
+
+	    	Dice type <select id="dice2">
+			<option value="4">4</option>
+			<option value="6">6</option>
+			<option value="8">8</option>
+			<option value="10">10</option>
+			<option value="12">12</option>
+			<option value="20" selected="selected">20</option>
+			<option value="100">100</option>
+		    </select>
+
+		    Bonus <input id="bonus2" size="3" value="0" /></p>
+
+    		<p>Score to reach <input id="goal2" size="3" value="10" onchange="calcul(2, 1)" />
+
+	    	<i class="fas fa-calculator" onclick="calcul(2, 1)" title="Calculate"></i></p>
+
+		    <div id="result2"></div>
+
+		    <div id="chartContainer2" style="height: 200px; width:100%;"></div>
+	    </div>
+    </div>
+</body>
+
+<!-- Mirrored from www.aidedd.org/dnd-dice/index.php?l=1 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Mar 2022 23:07:08 GMT -->
+</html>	

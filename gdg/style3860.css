@@ -1,0 +1,73 @@
+/**********/
+/* BUILDER*/
+/**********/
+
+* 	{margin:0; padding:0; }
+html 	{font-size:62.5%; }
+body, textarea	{font-family: Verdana, Arial, sans-serif; font-size:1.2rem; color:#000; }
+a:link 		{text-decoration: none; color:#000; font-weight:bold; }
+a:visited 	{text-decoration: none; color:#000; font-weight:bold; }
+a:hover 	{text-decoration: none; color:#000; font-weight:normal; }
+
+h1 a:link, h1 a:visited, h1 a:hover {color:#fff;  font-weight:bold;}   
+
+h1	   	{font-family: Helvetica, Arial, sans-serif; font-size:48px; line-height:58px; font-weight:bold; color:#fff;}
+.header 	{background:#161616; padding:20px 10px 16px 20px;}
+.header p  	{font-family:Verdana, Arial, sans-serif; font-size:12px; color:#BBB;}
+
+h2		{margin:6px 0 9px 0; padding:0; font-size:2.0rem;}
+h3	 	{margin:9px 0 3px 0; padding:0; font-size:1.5rem;}
+hr 		{display:block; clear:both; border:0; margin:0 0 20px 0; }
+p.log	{line-height:2.4rem;}
+
+ol, ul	{margin-left:20px;}
+	
+select, input {font-size:1.2rem; }
+input		  {padding:2px; }
+.gras		  {font-weight:bold; }
+.center		  {text-align:center; }
+
+div.col		{float:left; padding:0.5%; vertical-align:top; display:inline-block; box-sizing: border-box} 
+div.col1	{width:18%; margin:1% 1% 0 1%; font-size:1.0rem; line-height:1.5rem; border:0; background-color:#DDD; border-radius: 6px;}
+div.col2	{width:80%; margin:1% 0  0 0 ; font-size:1.2rem; line-height:1.8rem; border:0 }
+
+div.submit	{padding:10px 50px 0px 50px}
+
+div.bloc100 {display:inline-block; width:100%; margin-bottom:25px;}
+div.bloc50 	{display:inline-block; width:50%; margin-bottom:25px;}
+
+div.col p	{padding:4px 0 4px 0}
+
+table.liste th	{text-align:center; padding:2px 8px 0px 0px;}
+table.liste td	{text-align:center; padding:2px 8px 0px 0px;}
+.left 			{text-align:left}
+.center			{text-align:center}
+.red			{color:#cc0000;}
+
+table.ordres th, table.ordres td	    {font-size:1.1rem; padding-right:8px;}
+table.ordres input	{width:20px; margin: 0 2px 0 2px; text-align:center; font-size:1.1rem;}
+table.ordres button	{width:20px;}
+p.total 		{font-size:1.3rem; text-align:center; font-weight:bold;}
+p.total input	{width:40px; font-size:1.3rem; text-align:center; font-weight:bold; margin-right:70px; background-color:#6666ff; color:white}
+
+input.AttP {background-color:#00cc00;}
+input.AttN {background-color:red;}
+
+select.type		{width:130px;}
+textarea#note, textarea#note2 {width:48%; font-size:1.1rem; padding:3px;}
+textarea#note   {margin-right:1%;}
+textarea#mur	{width:98%; background-color:#DDD; font-size:1.1rem; padding:3px}
+input#message	{width:90%;}
+
+.mort			{color:#cc0000;}
+.voleur			{color:#33cc33;}
+.homme			{color:#6699ff;}
+
+@media only screen and (max-width:999px) {
+	h1	   		{font-size:3.6rem; }
+	textarea#note, textarea#note2 {width:98%; margin:0%;}
+	div.col1	{width:33%; }
+	div.col2	{width:65%; }
+    div.bloc100 {width:100%; }
+    div.bloc50 	{width:100%; }
+}

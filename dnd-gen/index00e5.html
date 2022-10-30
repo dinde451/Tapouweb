@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="fr">
+
+<!-- Mirrored from www.aidedd.org/dnd-gen/index.php?l=0 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Mar 2022 23:21:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Name Generator &raquo; Dungeons &amp; Dragons - D&amp;D 5</title>
+	
+	<meta name="viewport" content="initial-scale=1">
+	<meta name="description" content="Générateur de noms D&D 5 pour nain, elfe, humain, halfelin, drakéide, gnome, tieffelin et taverne. L'application permet également la transcription dans l'un des 5 alphabets de D&D.">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@aideddorg">
+	<meta name="twitter:title" content="AideDD">
+	<meta name="twitter:description" content="D&amp;D 5 Name Generator">
+	<meta name="twitter:image" content="../assets/site/logo.png">
+	<script src="../dnd-commun/lib/jquery.min.js"></script>
+	<script src="fonctionsa4f0.js?v=0"></script>
+	<link rel="alternate" href="index.html" hreflang="fr" />
+	<link rel="alternate" href="index9f3e.html?l=1" hreflang="en" />
+	<link rel="canonical" href="index.html" />
+	<link rel="icon" href="../images/favicon.ico" sizes="16x16"/>
+	<link rel="icon" href="../images/favicon-32x32.png" sizes="32x32" />
+	<link rel="apple-touch-icon" href="../images/favicon-152x152.png" sizes="152x152" />
+	<link rel="icon" href="../images/favicon-192x192.png" sizes="192x192" />
+	<link href="../css/all.min.css" rel="stylesheet" />
+	<link href="../dnd-commun/style5e1f.css?v=2" rel="stylesheet" type="text/css" /> 
+	<link href="style1bce.css?v=6" rel="stylesheet" type="text/css" /> 
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-346920-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-346920-5');
+    </script>
+</head>
+
+<body>
+	
+	<!-- **** -->
+	<!-- MENU -->
+	<!-- **** -->
+
+	<div class="header">
+		<h1><a href="index.html">Name Generator</a></h1>
+		<p>Outil de génération de noms et transcripteur pour D&amp;D 5</p>
+
+		<nav>
+			<input class="menu-btn" type="checkbox" id="menu-btn" /><label class="menu-icon" for="menu-btn"><i class="fas fa-bars"></i></label>
+			<ul class="menu">
+			    <li><a href='../index.html'><i class='fas fa-home'></i></a></li><li id='contextMenu1' onclick="contextMenus('1')" class='current'>Générateur de noms</li><li id='contextMenu2' onclick="contextMenus('2')">Transcripteur</li><li><a href='https://www.youtube.com/watch?v=CDloYMi5waU'>Vidéo</a></li><li><a href='index9f3e.html?l=1'>English</a></li>	
+			 </ul>
+		</nav>
+	</div>
+
+	<!-- ************* -->
+	<!-- TAB Generator -->
+	<!-- ************* -->
+
+    <div id="tab1">
+    	<div class="col col1">
+	    	<div class="choix">Nain<br /><i class="far fa-lightbulb" onclick="genNomNAI(0)" ></i></div>
+    		<div class="choix">Elfe<br /><i class="far fa-lightbulb" onclick="genNomELF(0)" ></i></div>
+	    	<div class="choix">Halfelin<br /><i class="far fa-lightbulb" onclick="genNomHAL(0)" ></i></div>
+	    	<div class="choix">Humain (PNJ)<br /><i class="far fa-lightbulb" onclick="genNomHUM(0)" ></i></div>
+		    <div class="choix">Demi-orc<br /><i class="far fa-lightbulb" onclick="genNomORC(0)" ></i></div>
+		    <div class="choix">Drakéide<br /><i class="far fa-lightbulb" onclick="genNomDRA(0)" ></i></div>
+		    <div class="choix">Gnome<br /><i class="far fa-lightbulb" onclick="genNomGNO(0)" ></i></div>
+		    <div class="choix">Tieffelin<br /><i class="far fa-lightbulb" onclick="genNomTIE(0)" ></i></div>
+		    <div class="choix">Taverne<br /><i class="fas fa-beer" onclick="genNomTAV(0)" ></i></div>
+    	</div><div id="result" class="col col2">
+		    <p>Cette application online va vous permettre de générer aléatoirement divers noms.</p>
+
+			<h2>Générateur de noms</h2>
+			<p><strong><i class='far fa-lightbulb'></i></strong> Génère un nom pour des personnages elfes, halfelins, humains, nains, demi-orcs, drakéides, gnomes ou tieffelins.</p>
+			<p><strong><i class='fas fa-beer'></i></strong> Génère un nom de taverne, avec une rapide description de son type.</p>
+
+			<h2>Transcripteur</h2>
+			<p>Permet de visualiser la retranscription d'un texte dans l'un des 5 alphabets de D&D : elfique, nain, céleste, draconique ou infernal.</p>
+
+			<p>&nbsp;</p>
+			<p><a href="../site/contact/index.html">Reporter un problème</a></p>
+		    <div class="ads">
+			    <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+   				<!-- Application -->
+    			<ins class="adsbygoogle"
+	    		  style="display:block"
+		    	  data-ad-client="ca-pub-5355421917378265"
+			      data-ad-slot="5150556388"
+   				  data-ad-format="auto"
+    			  data-full-width-responsive="true"></ins>
+	    		<script>
+		    	  (adsbygoogle = window.adsbygoogle || []).push({});
+			    </script>
+		    </div>
+		</div>
+	</div>
+	
+	<!-- **************** -->
+	<!-- TAB Transcriptor -->
+	<!-- **************** -->
+
+   <div id="tab2" style="display:none">
+		<div class="col col1">
+    		<p>Entrez ci-dessous le texte à transcrire</p>
+	    	<input type="text" id="texte" maxlength="100" value=""/>
+
+			<br /><br />
+    		<select id="langue">
+	    		<option value="elfique">Elfique</option>
+		    	<option value="nain">Nain</option>
+			    <option value="celeste">Céleste</option>
+    			<option value="draconique">Draconique</option>
+	    		<option value="infernal">Infernal</option>
+		    </select>
+			<button onclick="transcripteur('e')">TRANSCRIRE</button>
+
+    	</div><div class="col col2" id="output">
+
+		</div>
+    </div>
+</body>
+
+<!-- Mirrored from www.aidedd.org/dnd-gen/index.php?l=0 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Mar 2022 23:21:07 GMT -->
+</html>	

@@ -1,0 +1,71 @@
+/****************/
+/* STYLE COMMUN */
+/****************/
+
+* 			{box-sizing:border-box; margin:0; padding:0; outline:none}
+html	 	{font-size:10px}
+body	 	{font-family:Verdana, Arial, sans-serif; background-color:white; line-height:1.5rem}
+
+/* header en px pour taille fixe */
+.header 	{background:#161616; width:100%; padding:28px 10px 10px 10px}
+.header h1	{font-family:Helvetica, Arial, sans-serif; font-size:48px; line-height:48px; font-weight:bold; color:white}
+.header h1 a:link, h1 a:visited, h1 a:hover {text-decoration:none; color:#fff}
+.header p	{font-family:Verdana, Arial, sans-serif; font-size:12px; color:#BBB; padding-top:5px}
+
+hr	 		{display:block; clear:both; border:0}
+
+div.col		{display:inline-block; width:100%; vertical-align:top; font-size:1.2rem; padding:10px} 
+
+textarea, select, input, span {font-family:Verdana, Arial, sans-serif; font-size:1.2rem; padding:2px}
+button		{margin:2px; background-color:#B80000; color:#FFF; padding:7px 14px 7px 14px; border:0px solid #B80000; border-radius:4px}
+
+.center		{text-align:center}
+.gras		{font-weight:bold}
+.red		{color:#B80000}
+
+div.ads		{text-align:center; margin:8px}
+
+/* Smarphone */
+@media only screen and (max-width:1099px) {
+	.header 	{padding-top:18px}
+	.header h1	{font-size:32px; line-height:32px}
+	.header 	{padding-left:10px; padding-bottom:0px}
+	.header p	{margin-top:0}
+}
+
+/********/
+/* MENU */
+/********/
+
+.header .menu {max-height:0; transition:max-height .2s ease-out}
+.header .menu-icon {position:absolute;right:10px; top:24px; padding:4px; color:white; font-size:20px; transition:background .2s ease-out}
+.header .menu-btn {display:none}
+.header .menu-btn:checked ~ .menu {max-height:400px}
+
+/* menu en px pour taille fixe */
+.header ul {list-style:none; overflow:hidden; padding-top:2px; padding-bottom:6px}
+.header li {display:block; padding:10px 6px;
+			font-family:Helvetica, Arial, sans-serif; text-transform:uppercase; font-size:18px; font-weight:bold}
+.header li a, .header li {text-decoration:none; color:#989898}
+.header li a:hover, .header li:hover, .header li a.current, .header li.current {color:white}
+
+/* deskptop */
+@media (min-width:1099px) {
+	.header ul {position:absolute; right:10px; top:76px; overflow:visible; padding:0}
+	.header li {float:left; padding:6px 12px;
+				white-space:nowrap; text-transform:none; font-size:15px}
+	.header .menu {clear:none; float:right; max-height:none}
+	.header .menu-icon { display:none}
+
+	ul.menu li {cursor:pointer}	/* liens javascript */
+}
+
+/*********/
+/* MODAL */
+/*********/
+
+#overlay 	{position:fixed; top:0; left:0; width:100%; height:100%; background:#000; opacity:0.5; filter:alpha(opacity=50)}
+#modal 		{position:absolute; border-radius:14px; padding:8px}
+#content 	{border-radius:8px; background:#fff; padding:10px; margin:30px; line-height:1.8rem}
+#close 		{position:absolute; background:url(images/close.html) 0 0 no-repeat; width:36px; height:36px; display:block; text-indent:-9999px; top:-9px; right:-9px; margin:30px}
+#content i	{font-size:1.8rem; padding:0px; float:none; position:static}

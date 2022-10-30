@@ -1,0 +1,31 @@
+/**********/
+/* LDVELH */
+/**********/
+
+h2	{margin:20px 0 10px 0}
+h3 	{margin:9px 0 3px 0; padding:0; font-size:1.5rem}
+
+div.col1	{width:50%; padding:10px; margin-top:10px; border:0; line-height:1.8rem}
+div.col2	{width:50%; padding:10px; margin-top:10px; border-left:1px solid #DDD}
+div.col01	{width:13%; margin:1% 1% 0 1%; font-size:1.1rem; line-height:1.6rem; border:0; background-color:#DDD; border-radius: 6px}
+div.col02	{width:83%; margin:1% 1% 0 0 ; font-size:1.3rem; line-height:1.8rem; border:0 }
+
+div.col2 p {margin-bottom:6px}
+div.col01 p	{padding:6px 0 6px 0; text-align:justify}
+div.col02 p {padding:0 0 12px 0; text-align:justify}
+a			{text-decoration:none; color:#B80000; font-weight:bold}
+i.fa-book	{text-decoration:none; color:#222; font-size:4rem; float:left; margin:0 8px 8px 0}
+
+input		{margin:4px}
+.center		{text-align:center}
+.po			{margin-top:6px}
+img.imgR	{float:right; margin:5px 0 5px 10px}
+
+@media only screen and (max-width:799px) {
+	div.col1	{width:100%; border:0; margin-top:5px}
+	div.col2	{width:100%; border:0; margin-top:15px}
+	div.col01	{display:none}
+	div.col02	{width:98%; margin:1%}
+	div.col02 p	{font-size:1.5rem; line-height:2.4rem}
+	img.imgR	{display:none}
+}
