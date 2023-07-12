@@ -71,9 +71,9 @@ body {
 
 	/* Brand */
 	.header .brand {float:left; margin-top:28px; color:white}
-		.brand a { /* AideDD Nom du site */
+		.brand a { /* Tapouweb Nom du site */
 			font-family:Helvetica, Arial, sans-serif; font-size:48px; line-height:48px; font-weight:bold; color:white}
-		.brand p { /* AideDD sous titre du site */
+		.brand p { /* Tapouweb sous titre du site */
 			margin:2px 0 7px 0;
 			font-family:Verdana, Arial, sans-serif;	font-size:12px; color:#BBB}
 
@@ -145,13 +145,13 @@ body {
 			text-transform:uppercase;
 			font-size:11px;
 			color:#555;
-			line-height:14px;		/* Aidedd */
+			line-height:14px;		/* Tapouweb */
 			border-style:none;
 			font-family:Helvetica, Arial, sans-serif;
 		}
 		.main .secondary li.section,
 		.main .secondary li.current {
-			background:#e8e8e8;			/* AideDD section selectionnée dans menu */
+			background:#e8e8e8;			/* Tapouweb section selectionnée dans menu */
 		}
 		.main .secondary li.current a.current {
 			background:#D0D0D0;
@@ -342,11 +342,11 @@ div#ads 		{text-align:center; margin:8px 0 8px 0}
 	.nav-open-button,
 	.search-bar,
 	.search-dropdown-icon,
-	nav.secondary,			/* AideDD */
-	div#ads,				/* AideDD */
-	p.auteur,				/* AideDD */
+	nav.secondary,			/* Tapouweb */
+	div#ads,				/* Tapouweb */
+	p.auteur,				/* Tapouweb */
 	nav.primary {display:none}
 
-	.size1of5 {width:0%};	/* AideDD */
-	.size4of5 {width:100%}	/* AideDD */
+	.size1of5 {width:0%};	/* Tapouweb */
+	.size4of5 {width:100%}	/* Tapouweb */
 }
