@@ -65,7 +65,9 @@ body {
 
 /* HEADER */
 
-.header {background:#161616}
+.header {
+	background: #091e03
+}
 
 	.header .inner {position:relative}
 
