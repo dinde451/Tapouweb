@@ -21,6 +21,30 @@
 	<link rel="icon" href="images/favicon-32x32.png" sizes="32x32" />
 	<link rel="apple-touch-icon" href="images/favicon-152x152.png" sizes="152x152" />
 	<link rel="icon" href="images/favicon-192x192.png" sizes="192x192" />
+	<style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .img-zoom-container {
+            position: relative;
+        }
+
+        .img-zoom-lens {
+            position: absolute;
+            border: 1px solid #d4d4d4;
+            /*set the size of the lens:*/
+            width: 40px;
+            height: 40px;
+        }
+
+        .img-zoom-result {
+            border: 1px solid #d4d4d4;
+            /*set the size of the result div:*/
+            width: 450px;
+            height: 450px;
+        }
+		</style>
 </head>
 <body class="Accueil" dir="ltr">
 <header class="header">
@@ -109,6 +133,75 @@
 			<p>MUMU TAPOU est un site qui parle du jeu de rôle médiéval fantastique <em>Dungeons &amp; Dragons</em> depuis 2021.</p><p><strong>D&amp;D 5</strong>. News officielles de WotC, présentation des livres, des suppléments et des romans de la gamme <em>D&amp;D 5</em>, traductions d'articles des rubriques Unearthed Arcana et Sage Advice de WotC et du site D&amp;D Beyond, quiz.</p><p><strong>Règles</strong>. Création de personnages, races, classes, historiques, équipement, dons, multiclassage, combat, magie, sorts, conditions, créatures, objets magiques : toutes les règles dont vous avez besoin pour jouer à D&amp;D 5 en français.</p><p><strong>Aides de jeu</strong>. Test d'alignement, scénarios clé en main, feuille de personnage, Character Builder, Online Assistant (VTT) : pleins d'aides de jeu à consulter ou à télécharger et d'outils informatiques pour faciliter la vie des joueurs et du MD.</p><p><strong>Univers</strong>. Plans, panthéon, histoire, géographie, organisations, écologie des monstres : un univers complet et détaillé basé sur les Terres de Chenillama pour situer les aventures de vos joueurs.</p><p><strong>Site</strong>. (Tapou web est fortement inspirer de Aidedd) La section site parle uniquement du site Aidedd.org, Anciens éditos, statistiques de fréquentation, livre d'or, formulaire de contact pour joindre l'équipe, revue de presse, plateformes utilisées : l'essentiel des infos sur la vie du site.</p><p><strong>Forum</strong>. Pour parler de <em>Dungeons &amp; Dragons 5</em>, dissiper vos doutes sur un point de règle particulier, répondre à vos questions sur l'univers présenté et jouer en ligne avec d'autres membres de la communauté.</p><p><em>Dungeons &amp; Dragons 5</em> est publié par Wizards of the Coast et traduit en français de 2014 à 2019 par Black Book Éditions, de 2020 à 2021 par Asmodée et à partir de juin 2021 par Wizards of the Coast FR.</p><p><span>This website is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.</span></p>
 		</div>
 	
+		<div>
+			<p> Le Demiplan du Mangeur - Module F</p>
+			<div class="img-zoom-container">
+				<img id="myimage" src="map.png" width="600" height="8" alt="Girl">
+				<div id="myresult" class="img-zoom-result"></div>
+
+				<script>
+					function imageZoom(imgID, resultID) {
+						var img, lens, result, cx, cy;
+						img = document.getElementById(imgID);
+						result = document.getElementById(resultID);
+						/* Create lens: */
+						lens = document.createElement("DIV");
+						lens.setAttribute("class", "img-zoom-lens");
+						/* Insert lens: */
+						img.parentElement.insertBefore(lens, img);
+						/* Calculate the ratio between result DIV and lens: */
+						cx = result.offsetWidth / lens.offsetWidth;
+						cy = result.offsetHeight / lens.offsetHeight;
+						/* Set background properties for the result DIV */
+						result.style.backgroundImage = "url('" + img.src + "')";
+						result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+						/* Execute a function when someone moves the cursor over the image, or the lens: */
+						lens.addEventListener("mousemove", moveLens);
+						img.addEventListener("mousemove", moveLens);
+						/* And also for touch screens: */
+						lens.addEventListener("touchmove", moveLens);
+						img.addEventListener("touchmove", moveLens);
+						function moveLens(e) {
+							var pos, x, y;
+							/* Prevent any other actions that may occur when moving over the image */
+							e.preventDefault();
+							/* Get the cursor's x and y positions: */
+							pos = getCursorPos(e);
+							/* Calculate the position of the lens: */
+							x = pos.x - (lens.offsetWidth / 2);
+							y = pos.y - (lens.offsetHeight / 2);
+							/* Prevent the lens from being positioned outside the image: */
+							if (x > img.width - lens.offsetWidth) { x = img.width - lens.offsetWidth; }
+							if (x < 0) { x = 0; }
+							if (y > img.height - lens.offsetHeight) { y = img.height - lens.offsetHeight; }
+							if (y < 0) { y = 0; }
+							/* Set the position of the lens: */
+							lens.style.left = x + "px";
+							lens.style.top = y + "px";
+							/* Display what the lens "sees": */
+							result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
+						}
+						function getCursorPos(e) {
+							var a, x = 0, y = 0;
+							e = e || window.event;
+							/* Get the x and y positions of the image: */
+							a = img.getBoundingClientRect();
+							/* Calculate the cursor's x and y coordinates, relative to the image: */
+							x = e.pageX - a.left;
+							y = e.pageY - a.top;
+							/* Consider any page scrolling: */
+							x = x - window.pageXOffset;
+							y = y - window.pageYOffset;
+							return { x: x, y: y };
+						}
+					}
+				</script>
+				<script>
+					imageZoom("myimage", "myresult");
+				</script>
+
+			</div>
+		</div>
 
 	<div class="social">
 		<a href="site/contact/index.html"><i class="fas fa-envelope" title="Contact"></i></a>
