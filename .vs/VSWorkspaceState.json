@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\site",
+    "\\site\\contact"
   ],
+  "SelectedNode": "\\site\\contact\\index.html",
   "PreviewInSolutionExplorer": false
 }
