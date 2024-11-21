@@ -14,7 +14,7 @@ const createWindow = () => {
     icon: path.join(__dirname, '..', 'assets', 'icon.png'), // Path to your icon
   });
 
-  mainWindow.loadFile(path.join(__dirname, '..', 'index.html'));
+  mainWindow.loadFile(path.join(__dirname, 'index.html'));
 
   // Handle context menu
   mainWindow.webContents.on('context-menu', (event, params) => {
