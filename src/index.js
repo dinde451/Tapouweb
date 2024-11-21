@@ -43,7 +43,7 @@ const createNewWindow = (url) => {
       preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true,
     },
-    icon: path.join(__dirname, '..', 'assets', 'icon.png'), // Same icon for new window
+    icon: path.join(__dirname, '..', 'assets', 'icon2.jpg'), // Same icon for new window
   });
   newWindow.loadURL(url);
 };
