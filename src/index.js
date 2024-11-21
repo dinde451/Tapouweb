@@ -1,12 +1,13 @@
 const { app, BrowserWindow, Menu, MenuItem } = require('electron');
+Menu.setApplicationMenu(false)
 const path = require('node:path');
 
 let mainWindow;
 
 const createWindow = () => {
   mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1000,
+    height: 1000,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true,
@@ -36,8 +37,8 @@ const createWindow = () => {
 
 const createNewWindow = (url) => {
   const newWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1000,
+    height: 1000,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true,
