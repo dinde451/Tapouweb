@@ -47,7 +47,7 @@ body a {text-decoration:none; color:#B80000}
 	.typography table tr:nth-child(even),
 	.typography table tr.even,
 	.typography thead td {background-color:#D0D0D0}		/* Tapouweb ligne paire des tableaux */
-	.typography table th {padding:1px 8px; background-color:#333333FFF; border-width:0; vertical-align:bottom}
+	.typography table th {padding:1px 8px; background-color:#333333; border-width:0; vertical-align:bottom}
 	.typography table th:first-child {min-width:38px}
 	.typography table td {padding:1px 8px; border-width:0; vertical-align:top; line-height:19px}
 	.typography table th {font-weight:bold; line-height:16px}
@@ -191,10 +191,10 @@ a.ancre::before {content:"➥"}
 .typography .citAuteur {float:right; width:50%; display:block; clear:both; background:none;
 	text-indent:0px; margin:6px 0 0 3%;	font-size:16px; line-height:22px; color:#777; font-style:normal; text-align:right}
 
-.typography .dialogue {background-color:#F2EEE0; border-width:8px; border-style:solid; border-image:url(../images/dd-dialogue.png) 8;
-	padding:8px; margin-bottom:8px; font-family:Verdana, Arial, sans-serif; font-size:12px; line-height:22px; color:#000}
+.typography .dialogue {background-color:#2D2C2E;
+	padding:8px; margin-bottom:8px; font-family:Verdana, Arial, sans-serif; font-size:12px; line-height:22px; color:#ffff}
 
-.typography .encadre {float:right; width:33%; background-color:#DBE2C2;	border-width:13px;	border-style:solid; border-image:url(../images/dd-encadre.png) 13;
+.typography .encadre {float:right; width:33%; background-color:#2D2C2E;	border-width:13px;	border-style:solid; border-image:url(../images/dd-encadre.png) 13;
 	padding:6px 0 6px 0; margin:0px 0 4px 10px;	font-size:11px; line-height:18px; color:#000; font-family:Verdana, Arial, sans-serif; box-sizing:border-box}
 	.typography p.encadre::first-letter {font-size:15px}
 	.typography .encadre ul, .typography .encadre ol {margin:0 0 10px 10px}
@@ -235,7 +235,7 @@ a.ancre::before {content:"➥"}
 
 /* liste de sorts, monstres, om, ... */
 .content div.liste 	{line-height:34px}
-.content div.liste a {border:1px #888 solid; padding:4px 8px; white-space:nowrap; margin-right:4px; background-color:#F8F8F8}
+.content div.liste a {border:1px #888 solid; padding:4px 8px; white-space:nowrap; margin-right:4px; background-color:#2D2C2E}
 
 /* Enigme */
 div.question 	{border:1px solid #888888; background-color:#BBBBBB; padding:4px}
